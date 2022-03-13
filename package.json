@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "nvs auto && nuxi dev",
+    "generate": "nvs auto && nuxi generate",
+    "preview": "nvs auto && nuxi preview",
+    "i": "nvs auto && npm i"
+  },
+  "dependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27367930.baa0853",
+    "nuxt-edge": "^2.16.0-27358576.777a4b7f",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0"
+  }
+}
