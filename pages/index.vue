@@ -1,11 +1,7 @@
 <script setup>
-const count = ref(0)
-const inc = () => count.value++
 </script>
-
 <template lang="pug">
-div
-  div count: {{ count }}
-  button(@click="inc")
-    | inc
+div(v-if="1 < 2")
+  | hello
 </template>
+  
