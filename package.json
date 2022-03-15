@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev": "nvs auto && nuxi dev",
-    "generate": "nvs auto && nuxi generate",
-    "preview": "nvs auto && nuxi preview",
-    "i": "nvs auto && npm i"
+    "dev": "(nvs auto || node -v) && nuxi dev",
+    "generate": "(nvs auto || node -v) && nuxi generate",
+    "preview": "(nvs auto || node -v) && nuxi preview",
+    "i": "(nvs auto || node -v) && npm i"
   },
   "dependencies": {
     "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27367930.baa0853",
