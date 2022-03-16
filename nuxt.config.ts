@@ -1,4 +1,6 @@
 import { defineNuxtConfig } from '@nuxt/bridge'
+import extractorPug from '@unocss/extractor-pug'
+import { extractorSplit } from '@unocss/core'
 export default async () => {
   return defineNuxtConfig({
     target: 'static',
@@ -29,5 +31,23 @@ export default async () => {
       // Config for Vite
     },
     components: true,
+    buildModules: [
+      '@unocss/nuxt',
+    ],
+    unocss: {
+      uno: true, // enabled `@unocss/preset-uno`
+      icons: true, // enabled `@unocss/preset-icons`
+      attributify: true, // enabled `@unocss/preset-attributify`,    
+      shortcuts: [
+        [/^hover-(.+)$/i, ([, c]) => `hover:${c}`],
+        [/^important-(.+)$/i, ([, c]) => `!${c}`],
+        [/^(.+)-c-((?:[0-9a-f]{3,4}){1,2})$/i, ([, p, c]) => `${p}-#${c}`],
+      ],
+      extractors: [
+        //
+        extractorPug(),
+        extractorSplit,
+      ],
+    },
   })
 }

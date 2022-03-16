@@ -6,7 +6,9 @@
     "i": "(nvs auto || node -v) && npm i"
   },
   "dependencies": {
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge@^3.0.0-27455730.3e0a3ed",
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@3.0.0-27365509.a2e2e04",
+    "@unocss/extractor-pug": "^0.28.1",
+    "@unocss/nuxt": "^0.28.1",
     "nuxt-edge": "^2.16.0-27358576.777a4b7f",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0"
