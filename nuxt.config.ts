@@ -3,6 +3,9 @@ export default async () => {
   return defineNuxtConfig({
     target: 'static',
     ssr: false,
+    build: {
+      ssr: false,
+    },
     bridge: {
       // -- Opt-in features --
       // Use Vite as the bundler instead of Webpack 4
